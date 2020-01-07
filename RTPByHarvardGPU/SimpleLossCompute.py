@@ -10,6 +10,10 @@ class SimpleLossCompute:
         x = self.generator(x)
         loss = self.criterion(x.contiguous().view(-1, x.size(-1)),
                               y.contiguous().view(-1)) / norm
+        # print('x',x.size())
+        # print('x.contiguous()',x.contiguous().size())
+        # print('x.contiguous().view(-1, x.size(-1))',x.contiguous().view(-1, x.size(-1)).size())
+        # print('x.size(-1)', x.size(-1).size())
         loss.backward()
         if self.opt is not None:
             self.opt.step()

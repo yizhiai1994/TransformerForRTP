@@ -1,4 +1,6 @@
 import torch
+from sklearn.model_selection import train_test_split
+
 class Data():
     def __init__(self,data_address = '',first_line_skip = True, split_kw = ',',encoding = 'utf-8'):
         self.data_address = data_address
@@ -45,6 +47,14 @@ class Data():
         self.event2id = event2id
         self.id2event = id2event
         self.vocab_size = len(event2id)
+    # def split_train_test(self,train_size):
+    #     trace_list = [self.trace_data[k] for k in self.trace_data]
+    #     self.train_trace, self.test_trace = train_test_split(self.trace_data,train_size=train_size, random_state=42)
+    # def gen_batch_predicEvent(self):
+    #     for trace in self.train_trace:
+    #         train_src_temp = [self.event2id[record[0]] for record in trace_list[trace][:-1]]
+    #         tgt_temp = [event2id[record[0]] for record in trace_list[trace][1:]]
+
 
 
 # Example

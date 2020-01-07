@@ -4,174 +4,51 @@
     <bookmark url="file://$PROJECT_DIR$/harvard_GPU/Train.py" line="28" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bdfc0532-716f-47b0-a00c-03cf46f79392" name="Default Changelist" comment="test">
-      <change afterPath="$PROJECT_DIR$/.idea/TransformerForRTP.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/R_User_Library.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/helpdesk.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU/Batch.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU/Data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU/Decoder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU/DecoderLayer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU/Embeddings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU/Encoder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU/EncoderDecoder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU/EncoderLayer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU/Generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU/LabelSmoothing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU/LayerNorm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU/Merge.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU/MultiHeadedAttention.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU/NoamOpt.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU/Pattern.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU/PositionalEncoding.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU/PositionwiseFeedForward.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU/SimpleLossCompute.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU/SublayerConnection.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU/Tool.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU/Train.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU/TrainTool.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU/Train_backup.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU/Train_v1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU/Train_v2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU/Train_v3初步完成使用活动数据的Transformer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU/下一步任务" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU_backup_V初步完成数据替换/Batch.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU_backup_V初步完成数据替换/Data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU_backup_V初步完成数据替换/Decoder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU_backup_V初步完成数据替换/DecoderLayer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU_backup_V初步完成数据替换/Embeddings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU_backup_V初步完成数据替换/Encoder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU_backup_V初步完成数据替换/EncoderDecoder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU_backup_V初步完成数据替换/EncoderLayer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU_backup_V初步完成数据替换/Generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU_backup_V初步完成数据替换/LabelSmoothing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU_backup_V初步完成数据替换/LayerNorm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU_backup_V初步完成数据替换/Merge.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU_backup_V初步完成数据替换/MultiHeadedAttention.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU_backup_V初步完成数据替换/NoamOpt.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU_backup_V初步完成数据替换/Pattern.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU_backup_V初步完成数据替换/PositionalEncoding.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU_backup_V初步完成数据替换/PositionwiseFeedForward.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU_backup_V初步完成数据替换/SimpleLossCompute.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU_backup_V初步完成数据替换/SublayerConnection.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU_backup_V初步完成数据替换/Tool.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU_backup_V初步完成数据替换/Train.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU_backup_V初步完成数据替换/TrainTool.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU_backup_V初步完成数据替换/Train_backup.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU_backup_V初步完成数据替换/Train_v1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU_backup_V初步完成数据替换/Train_v2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU_backup_V初步完成数据替换/Train_v3初步完成使用活动数据的Transformer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard/Batch.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard/Decoder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard/DecoderLayer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard/Embeddings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard/Encoder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard/EncoderDecoder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard/EncoderLayer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard/Generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard/LabelSmoothing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard/LayerNorm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard/Merge.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard/MultiHeadedAttention.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard/NoamOpt.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard/Pattern.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard/PositionalEncoding.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard/PositionwiseFeedForward.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard/SimpleLossCompute.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard/SublayerConnection.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard/Tool.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard/Train.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_GPU/Batch.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_GPU/Decoder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_GPU/DecoderLayer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_GPU/Embeddings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_GPU/Encoder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_GPU/EncoderDecoder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_GPU/EncoderLayer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_GPU/Generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_GPU/LabelSmoothing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_GPU/LayerNorm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_GPU/Merge.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_GPU/MultiHeadedAttention.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_GPU/NoamOpt.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_GPU/Pattern.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_GPU/PositionalEncoding.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_GPU/PositionwiseFeedForward.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_GPU/SimpleLossCompute.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_GPU/SublayerConnection.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_GPU/Tool.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_GPU/Train.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en.tgz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.dev2010.de-en.de" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.dev2010.de-en.de.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.dev2010.de-en.en" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.dev2010.de-en.en.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.tst2010.de-en.de" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.tst2010.de-en.de.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.tst2010.de-en.en" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.tst2010.de-en.en.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.tst2011.de-en.de" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.tst2011.de-en.de.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.tst2011.de-en.en" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.tst2011.de-en.en.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.tst2012.de-en.de" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.tst2012.de-en.de.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.tst2012.de-en.en" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.tst2012.de-en.en.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.tst2013.de-en.de" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.tst2013.de-en.de.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.tst2013.de-en.en" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.tst2013.de-en.en.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.tst2014.de-en.de" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.tst2014.de-en.de.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.tst2014.de-en.en" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.tst2014.de-en.en.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TEDX.dev2012.de-en.de" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TEDX.dev2012.de-en.de.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TEDX.dev2012.de-en.en" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TEDX.dev2012.de-en.en.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TEDX.tst2013.de-en.de" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TEDX.tst2013.de-en.de.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TEDX.tst2013.de-en.en" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TEDX.tst2013.de-en.en.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TEDX.tst2014.de-en.de" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TEDX.tst2014.de-en.de.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TEDX.tst2014.de-en.en" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TEDX.tst2014.de-en.en.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/README" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/train.de-en.de" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/train.de-en.en" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/train.en" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/train.tags.de-en.de" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/train.tags.de-en.en" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/Batch.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/Data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/Decoder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/DecoderLayer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/Embeddings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/Encoder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/EncoderDecoder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/EncoderLayer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/Generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/LabelSmoothing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/LayerNorm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/Merge.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/MultiHeadedAttention.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/MultiTrain.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/NoamOpt.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/Pattern.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/PositionalEncoding.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/PositionwiseFeedForward.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/SimpleLossCompute.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/SublayerConnection.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/Tool.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/Train.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/TrainTool.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harvard_MultiGPU/Train_backup.py" afterDir="false" />
+    <list default="true" id="bdfc0532-716f-47b0-a00c-03cf46f79392" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en.tgz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.dev2010.de-en.de" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.dev2010.de-en.de.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.dev2010.de-en.en" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.dev2010.de-en.en.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.tst2010.de-en.de" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.tst2010.de-en.de.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.tst2010.de-en.en" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.tst2010.de-en.en.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.tst2011.de-en.de" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.tst2011.de-en.de.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.tst2011.de-en.en" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.tst2011.de-en.en.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.tst2012.de-en.de" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.tst2012.de-en.de.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.tst2012.de-en.en" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.tst2012.de-en.en.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.tst2013.de-en.de" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.tst2013.de-en.de.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.tst2013.de-en.en" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.tst2013.de-en.en.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.tst2014.de-en.de" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.tst2014.de-en.de.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.tst2014.de-en.en" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TED.tst2014.de-en.en.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TEDX.dev2012.de-en.de" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TEDX.dev2012.de-en.de.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TEDX.dev2012.de-en.en" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TEDX.dev2012.de-en.en.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TEDX.tst2013.de-en.de" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TEDX.tst2013.de-en.de.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TEDX.tst2013.de-en.en" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TEDX.tst2013.de-en.en.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TEDX.tst2014.de-en.de" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TEDX.tst2014.de-en.de.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TEDX.tst2014.de-en.en" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/IWSLT16.TEDX.tst2014.de-en.en.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/train.de-en.de" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/train.de-en.en" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/train.en" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/train.tags.de-en.de" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/harvard_MultiGPU/.data/iwslt/de-en/train.tags.de-en.en" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -224,7 +101,7 @@
         <entry file="file://$PROJECT_DIR$/RTPByHarvardGPU/下一步任务">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="50">
-              <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -392,6 +269,11 @@
             <path>
               <item name="TransformerForRTP" type="b2602c69:ProjectViewProjectNode" />
               <item name="TransformerForRTP" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TransformerForRTP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TransformerForRTP" type="462c0819:PsiDirectoryNode" />
+              <item name="harvard_MultiGPU" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TransformerForRTP" type="b2602c69:ProjectViewProjectNode" />
@@ -576,17 +458,35 @@
       <workItem from="1577689342424" duration="6069000" />
       <workItem from="1577949159277" duration="11345000" />
       <workItem from="1578211229952" duration="10190000" />
-      <workItem from="1578294958343" duration="1313000" />
+      <workItem from="1578294958343" duration="1570000" />
+      <workItem from="1578296544612" duration="130000" />
     </task>
+    <task id="LOCAL-00001" summary="test">
+      <created>1578296335205</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1578296335205</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28917000" />
+    <option name="totallyTimeSpent" value="29304000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25799572" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26066098" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -595,9 +495,9 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" visible="true" weight="0.329718" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.329718" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.329718" />
@@ -615,7 +515,8 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1012,7 +913,7 @@
     <entry file="file://$PROJECT_DIR$/RTPByHarvardGPU/下一步任务">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
-          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
         </state>
       </provider>
     </entry>

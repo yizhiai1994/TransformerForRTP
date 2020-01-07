@@ -30,11 +30,7 @@ def make_model(src_vocab, tgt_vocab, N=6,
     position = PositionalEncoding(d_model, dropout)
     model = EncoderDecoder(
         Encoder(EncoderLayer(d_model, c(attn), c(ff), dropout), N),
-        Decoder(DecoderLayer(d_model, c(attn), c(attn),
-                             c(ff), dropout), N),
-        nn.Sequential(Embeddings(d_model, src_vocab), c(position)),
-        nn.Sequential(Embeddings(d_model, tgt_vocab), c(position)),
-        Generator(d_model, tgt_vocab))
+        nn.Sequential(Embeddings(d_model, src_vocab), c(position)))
 
     # This was important from their code.
     # Initialize parameters with Glorot / fan_avg.
@@ -45,15 +41,14 @@ def make_model(src_vocab, tgt_vocab, N=6,
 
 def run_epoch(data_iter, model, loss_compute):
     "Standard Training and Logging Function"
-
     start = time.time()
     total_tokens = 0
     total_loss = 0
     tokens = 0
+
     for i, batch in enumerate(data_iter):
-        out = model.forward(batch.src, batch.trg,
-                            batch.src_mask, batch.trg_mask)
-        loss = loss_compute(out, batch.trg_y, batch.ntokens)
+        out = model.forward(batch.src, batch.src_mask)
+        loss = loss_compute(out, batch.trg, batch.ntokens)
         total_loss += loss
         total_tokens += batch.ntokens
         tokens += batch.ntokens
