@@ -20,6 +20,7 @@ from RTPByHarvardGPU.LabelSmoothing import LabelSmoothing
 from RTPByHarvardGPU.Batch import Batch
 from RTPByHarvardGPU.SimpleLossCompute import SimpleLossCompute
 from RTPByHarvardGPU.Tool import subsequent_mask
+from RTPByHarvardGPU.PredictLayer import PredictLayer
 import os
 def make_model(src_vocab, tgt_vocab, N=6,
                d_model=512, d_ff=2048, h=8, dropout=0.1):
@@ -28,7 +29,7 @@ def make_model(src_vocab, tgt_vocab, N=6,
     attn = MultiHeadedAttention(h, d_model)
     ff = PositionwiseFeedForward(d_model, d_ff, dropout)
     position = PositionalEncoding(d_model, dropout)
-    model = EncoderDecoder(
+    model = PredictLayer(
         Encoder(EncoderLayer(d_model, c(attn), c(ff), dropout), N),
         nn.Sequential(Embeddings(d_model, src_vocab), c(position)))
 
@@ -39,16 +40,63 @@ def make_model(src_vocab, tgt_vocab, N=6,
             nn.init.xavier_uniform_(p)
     return model
 
+def result_eval(out, tgt, src, pad = 0):
+    src_mask = (src != pad).unsqueeze(-2)
+    src_mask = src_mask.contiguous().view(-1, 1)
+    out = out.contiguous().view(-1, 1)
+    tgt = tgt.contiguous().view(-1, 1)
+    pad_error_list = list()
+    no_pad_error_list = list()
+    for num in range(len(src_mask)):
+        if src_mask[num].item() != False:
+            pad_error_list.append(float(out[num].item() - tgt[num].item()))
+        no_pad_error_list.append(float(out[num].item() - tgt[num].item()))
+    pad_squaredError_list = [val * val for val in pad_error_list]
+    no_pad_squaredError_list = [val * val for val in no_pad_error_list]
+    pad_absError_list = [abs(val) for val in pad_error_list]
+    no_pad_absError_list = [abs(val) for val in no_pad_error_list]
+    pad_mse = sum(pad_squaredError_list) / len(pad_squaredError_list)
+    no_pad_mse = sum(no_pad_squaredError_list) / len(no_pad_squaredError_list)
+    pad_rmse = math.sqrt(sum(pad_squaredError_list) / len(pad_squaredError_list))
+    no_pad_rmse = math.sqrt(sum(no_pad_squaredError_list) / len(no_pad_squaredError_list))
+    pad_mae = sum(pad_absError_list) / len(pad_absError_list)
+    no_pad_mae = sum(no_pad_absError_list) / len(no_pad_absError_list)
+    print(pad_mae,no_pad_mae)
 def run_epoch(data_iter, model, loss_compute):
     "Standard Training and Logging Function"
     start = time.time()
     total_tokens = 0
     total_loss = 0
     tokens = 0
+    for i, batch in enumerate(data_iter):
+        out = model.forward(batch.src, batch.src_mask)
 
+        #print(out.contiguous().view(-1, out.size(-1)).size())
+        loss = loss_compute(out, batch.trg, batch.ntokens)
+
+        total_loss += loss
+        total_tokens += batch.ntokens
+        tokens += batch.ntokens
+        if i % 50 == 1:
+            elapsed = time.time() - start
+            print("Epoch Step: %d Loss: %f Tokens per Sec: %f" %
+                    (i, loss / batch.ntokens, tokens / elapsed))
+            start = time.time()
+            tokens = 0
+    return total_loss / total_tokens
+
+
+
+def eval_model(data_iter, model, loss_compute):
+    "Standard Training and Logging Function"
+    start = time.time()
+    total_tokens = 0
+    total_loss = 0
+    tokens = 0
     for i, batch in enumerate(data_iter):
         out = model.forward(batch.src, batch.src_mask)
         loss = loss_compute(out, batch.trg, batch.ntokens)
+        result_eval(out, batch.trg, batch.src, pad=0)
         total_loss += loss
         total_tokens += batch.ntokens
         tokens += batch.ntokens

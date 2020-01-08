@@ -6,6 +6,7 @@ class Batch:
     def __init__(self, src, trg=None, pad=0):
         self.src = src
         self.src_mask = (src != pad).unsqueeze(-2)
+
         self.trg = trg
         self.ntokens = (self.src != pad).data.sum()
         # if trg is not None:
