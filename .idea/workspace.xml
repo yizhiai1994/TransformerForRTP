@@ -5,47 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bdfc0532-716f-47b0-a00c-03cf46f79392" name="Default Changelist" comment="test">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RTPByHarvardGPU_未修改为多目标版本/RTPByHarvardGPU_未修改为多目标版本/Batch.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RTPByHarvardGPU_未修改为多目标版本/RTPByHarvardGPU_未修改为多目标版本/Batch_v1.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RTPByHarvardGPU_未修改为多目标版本/RTPByHarvardGPU_未修改为多目标版本/Data.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RTPByHarvardGPU_未修改为多目标版本/RTPByHarvardGPU_未修改为多目标版本/Decoder.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RTPByHarvardGPU_未修改为多目标版本/RTPByHarvardGPU_未修改为多目标版本/DecoderLayer.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RTPByHarvardGPU_未修改为多目标版本/RTPByHarvardGPU_未修改为多目标版本/Embeddings.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RTPByHarvardGPU_未修改为多目标版本/RTPByHarvardGPU_未修改为多目标版本/Encoder.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RTPByHarvardGPU_未修改为多目标版本/RTPByHarvardGPU_未修改为多目标版本/EncoderDecoder.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RTPByHarvardGPU_未修改为多目标版本/RTPByHarvardGPU_未修改为多目标版本/EncoderLayer.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RTPByHarvardGPU_未修改为多目标版本/RTPByHarvardGPU_未修改为多目标版本/Generator.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RTPByHarvardGPU_未修改为多目标版本/RTPByHarvardGPU_未修改为多目标版本/LabelSmoothing.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RTPByHarvardGPU_未修改为多目标版本/RTPByHarvardGPU_未修改为多目标版本/LayerNorm.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RTPByHarvardGPU_未修改为多目标版本/RTPByHarvardGPU_未修改为多目标版本/Merge.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RTPByHarvardGPU_未修改为多目标版本/RTPByHarvardGPU_未修改为多目标版本/MultiHeadedAttention.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RTPByHarvardGPU_未修改为多目标版本/RTPByHarvardGPU_未修改为多目标版本/NoamOpt.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RTPByHarvardGPU_未修改为多目标版本/RTPByHarvardGPU_未修改为多目标版本/Pattern.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RTPByHarvardGPU_未修改为多目标版本/RTPByHarvardGPU_未修改为多目标版本/PositionalEncoding.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RTPByHarvardGPU_未修改为多目标版本/RTPByHarvardGPU_未修改为多目标版本/PositionwiseFeedForward.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RTPByHarvardGPU_未修改为多目标版本/RTPByHarvardGPU_未修改为多目标版本/PredictLayer.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RTPByHarvardGPU_未修改为多目标版本/RTPByHarvardGPU_未修改为多目标版本/SimpleLossCompute.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RTPByHarvardGPU_未修改为多目标版本/RTPByHarvardGPU_未修改为多目标版本/SublayerConnection.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RTPByHarvardGPU_未修改为多目标版本/RTPByHarvardGPU_未修改为多目标版本/TempLossCompute.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RTPByHarvardGPU_未修改为多目标版本/RTPByHarvardGPU_未修改为多目标版本/Tool.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RTPByHarvardGPU_未修改为多目标版本/RTPByHarvardGPU_未修改为多目标版本/Train.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RTPByHarvardGPU_未修改为多目标版本/RTPByHarvardGPU_未修改为多目标版本/TrainTool.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RTPByHarvardGPU_未修改为多目标版本/RTPByHarvardGPU_未修改为多目标版本/TrainTool_v1.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RTPByHarvardGPU_未修改为多目标版本/RTPByHarvardGPU_未修改为多目标版本/Train_backup.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RTPByHarvardGPU_未修改为多目标版本/RTPByHarvardGPU_未修改为多目标版本/Train_kFoldCrossValidation.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RTPByHarvardGPU_未修改为多目标版本/RTPByHarvardGPU_未修改为多目标版本/Train_v1.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RTPByHarvardGPU_未修改为多目标版本/RTPByHarvardGPU_未修改为多目标版本/Train_v2.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RTPByHarvardGPU_未修改为多目标版本/RTPByHarvardGPU_未修改为多目标版本/Train_v3初步完成使用活动数据的Transformer.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RTPByHarvardGPU_未修改为多目标版本/RTPByHarvardGPU_未修改为多目标版本/result/helpdesk.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RTPByHarvardGPU_未修改为多目标版本/RTPByHarvardGPU_未修改为多目标版本/下一步任务" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/TransformerForRTP.iml" afterPath="$PROJECT_DIR$/.idea/TransformerForRTP.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RTPByHarvardGPU/Data.py" afterPath="$PROJECT_DIR$/RTPByHarvardGPU/Data.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RTPByHarvardGPU/Train.py" afterPath="$PROJECT_DIR$/RTPByHarvardGPU/Train.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RTPByHarvardGPU/TrainTool.py" afterPath="$PROJECT_DIR$/RTPByHarvardGPU/TrainTool.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RTPByHarvardGPU/Train_kFoldCrossValidation.py" afterPath="$PROJECT_DIR$/RTPByHarvardGPU/Train_kFoldCrossValidation.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RTPByHarvardGPU/下一步任务" afterPath="$PROJECT_DIR$/RTPByHarvardGPU/下一步任务" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -120,8 +80,8 @@
       <file leaf-file-name="下一步任务" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/RTPByHarvardGPU_未修改为多目标版本/RTPByHarvardGPU_未修改为多目标版本/下一步任务">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="378">
+              <caret line="14" column="3" lean-forward="false" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -168,7 +128,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/harvard/14.py" />
         <option value="$PROJECT_DIR$/harvard/15.py" />
         <option value="$PROJECT_DIR$/harvard/16.py" />
         <option value="$PROJECT_DIR$/harvard/temp.py" />
@@ -219,6 +178,7 @@
         <option value="$PROJECT_DIR$/RTPByHarvardGPU/TrainTool.py" />
         <option value="$PROJECT_DIR$/RTPByHarvardGPU/Train_kFoldCrossValidation.py" />
         <option value="$PROJECT_DIR$/RTPByHarvardGPU/下一步任务" />
+        <option value="$PROJECT_DIR$/RTPByHarvardGPU_未修改为多目标版本/RTPByHarvardGPU_未修改为多目标版本/下一步任务" />
       </list>
     </option>
   </component>
@@ -276,6 +236,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="RTPByHarvardGPU_未修改为多目标版本" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TransformerForRTP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TransformerForRTP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RTPByHarvardGPU_未修改为多目标版本" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RTPByHarvardGPU_未修改为多目标版本" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="result" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -619,7 +601,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578467748680</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="test">
+      <created>1578566313674</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1578566313674</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1055,8 +1044,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/RTPByHarvardGPU_未修改为多目标版本/RTPByHarvardGPU_未修改为多目标版本/下一步任务">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="378">
+          <caret line="14" column="3" lean-forward="false" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
           <folding />
         </state>
       </provider>
