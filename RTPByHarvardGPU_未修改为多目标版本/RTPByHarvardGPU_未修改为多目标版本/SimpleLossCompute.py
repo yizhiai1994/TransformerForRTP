@@ -1,0 +1,21 @@
+class SimpleLossCompute:
+    "A simple loss compute and train function."
+
+    def __init__(self, generator, criterion, opt=None):
+        self.generator = generator
+        self.criterion = criterion
+        self.opt = opt
+
+    def __call__(self, x, y, norm):
+        x = self.generator(x)
+        loss = self.criterion(x.contiguous().view(-1, x.size(-1)),
+                              y.contiguous().view(-1)) / norm
+        # print('x',x.size())
+        # print('x.contiguous()',x.contiguous().size())
+        # print('x.contiguous().view(-1, x.size(-1))',x.contiguous().view(-1, x.size(-1)).size())
+        # print('x.size(-1)', x.size(-1).size())
+        loss.backward()
+        if self.opt is not None:
+            self.opt.step()
+            self.opt.optimizer.zero_grad()
+        return loss.item() * norm
