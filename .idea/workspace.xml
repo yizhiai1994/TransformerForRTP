@@ -4,12 +4,14 @@
     <bookmark url="file://$PROJECT_DIR$/harvard_GPU/Train.py" line="28" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bdfc0532-716f-47b0-a00c-03cf46f79392" name="Default Changelist" comment="">
+    <list default="true" id="bdfc0532-716f-47b0-a00c-03cf46f79392" name="Default Changelist" comment="test">
+      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RTPByHarvardGPU/Train_kFoldCrossValidation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/TransformerForRTP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TransformerForRTP.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RTPByHarvardGPU/Batch.py" beforeDir="false" afterPath="$PROJECT_DIR$/RTPByHarvardGPU/Batch.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RTPByHarvardGPU/TempLossCompute.py" beforeDir="false" afterPath="$PROJECT_DIR$/RTPByHarvardGPU/TempLossCompute.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RTPByHarvardGPU/Train.py" beforeDir="false" afterPath="$PROJECT_DIR$/RTPByHarvardGPU/Train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RTPByHarvardGPU/Data.py" beforeDir="false" afterPath="$PROJECT_DIR$/RTPByHarvardGPU/Data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RTPByHarvardGPU/TrainTool.py" beforeDir="false" afterPath="$PROJECT_DIR$/RTPByHarvardGPU/TrainTool.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RTPByHarvardGPU/下一步任务" beforeDir="false" afterPath="$PROJECT_DIR$/RTPByHarvardGPU/下一步任务" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RTPByHarvardGPU/Train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1075">
-              <caret line="41" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+            <state relative-caret-position="265">
+              <caret line="99" column="68" lean-forward="true" selection-start-line="99" selection-start-column="68" selection-end-line="99" selection-end-column="68" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -51,10 +53,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RTPByHarvardGPU/TempLossCompute.py">
+        <entry file="file://$PROJECT_DIR$/RTPByHarvardGPU/下一步任务">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="9" column="106" selection-start-line="9" selection-start-column="106" selection-end-line="9" selection-end-column="106" />
+            <state relative-caret-position="150">
+              <caret line="6" column="55" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -70,47 +72,24 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RTPByHarvardGPU/MultiHeadedAttention.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RTPByHarvardGPU/Batch.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-10">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RTPByHarvardGPU/PredictLayer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/RTPByHarvardGPU/TrainTool.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="70" column="41" selection-start-line="70" selection-start-column="41" selection-end-line="70" selection-end-column="41" />
+            <state relative-caret-position="388">
+              <caret line="156" column="63" selection-start-line="156" selection-start-column="63" selection-end-line="156" selection-end-column="63" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
+                <element signature="e#1746#2407#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RTPByHarvardGPU/Train_kFoldCrossValidation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -133,6 +112,7 @@
       <find>RTPByHarvardGPU</find>
       <find>print</find>
       <find>spacy</find>
+      <find>train</find>
     </findStrings>
     <replaceStrings>
       <replace>import</replace>
@@ -149,7 +129,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/harvard/13.py" />
         <option value="$PROJECT_DIR$/harvard/14.py" />
         <option value="$PROJECT_DIR$/harvard/15.py" />
         <option value="$PROJECT_DIR$/harvard/16.py" />
@@ -194,12 +173,13 @@
         <option value="$PROJECT_DIR$/harvard_MultiGPU/TrainTool.py" />
         <option value="$PROJECT_DIR$/harvard_MultiGPU/MultiTrain.py" />
         <option value="$PROJECT_DIR$/RTPByHarvardGPU/MultiHeadedAttention.py" />
-        <option value="$PROJECT_DIR$/RTPByHarvardGPU/Data.py" />
-        <option value="$PROJECT_DIR$/RTPByHarvardGPU/下一步任务" />
         <option value="$PROJECT_DIR$/RTPByHarvardGPU/Batch.py" />
         <option value="$PROJECT_DIR$/RTPByHarvardGPU/TempLossCompute.py" />
-        <option value="$PROJECT_DIR$/RTPByHarvardGPU/TrainTool.py" />
         <option value="$PROJECT_DIR$/RTPByHarvardGPU/Train.py" />
+        <option value="$PROJECT_DIR$/RTPByHarvardGPU/Data.py" />
+        <option value="$PROJECT_DIR$/RTPByHarvardGPU/Train_kFoldCrossValidation.py" />
+        <option value="$PROJECT_DIR$/RTPByHarvardGPU/下一步任务" />
+        <option value="$PROJECT_DIR$/RTPByHarvardGPU/TrainTool.py" />
       </list>
     </option>
   </component>
@@ -223,11 +203,6 @@
             <path>
               <item name="TransformerForRTP" type="b2602c69:ProjectViewProjectNode" />
               <item name="TransformerForRTP" type="462c0819:PsiDirectoryNode" />
-              <item name="Data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TransformerForRTP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TransformerForRTP" type="462c0819:PsiDirectoryNode" />
               <item name="RTPByHarvardGPU" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -240,16 +215,16 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Data" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/RTPByHarvardGPU" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\TransformerForRTP\RTPByHarvardGPU" />
       <recent name="D:\TransformerForRTP\Data" />
       <recent name="D:\TransformerForRTP" />
-      <recent name="D:\TransformerForRTP\RTPByHarvardGPU" />
       <recent name="D:\TransformerForRTP\RTPByHarvardGPU\Data" />
       <recent name="D:\TransformerForRTP\harvard" />
     </key>
@@ -270,7 +245,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Train (2)">
+  <component name="RunManager" selected="Python.Train_kFoldCrossValidation">
     <configuration name="Data" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="TransformerForRTP" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -307,28 +282,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/harvard_MultiGPU/MultiTrain.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Train (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="TransformerForRTP" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/harvard_GPU" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/harvard_GPU/Train.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -381,13 +334,57 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Train_kFoldCrossValidation" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="TransformerForRTP" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RTPByHarvardGPU" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RTPByHarvardGPU/Train_kFoldCrossValidation.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="TransformerForRTP" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Train_kFoldCrossValidation" />
         <item itemvalue="Python.Train (2)" />
         <item itemvalue="Python.Data" />
         <item itemvalue="Python.MultiTrain" />
         <item itemvalue="Python.Train (3)" />
-        <item itemvalue="Python.Train (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -406,7 +403,7 @@
       <workItem from="1578211229952" duration="10190000" />
       <workItem from="1578294958343" duration="1570000" />
       <workItem from="1578296544612" duration="130000" />
-      <workItem from="1578384724927" duration="8208000" />
+      <workItem from="1578384724927" duration="15847000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1578296335205</created>
@@ -429,11 +426,18 @@
       <option name="project" value="LOCAL" />
       <updated>1578384992437</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="test">
+      <created>1578467748680</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1578467748680</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37512000" />
+    <option name="totallyTimeSpent" value="45151000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -462,7 +466,8 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.329718" />
-      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.329718" />
+      <window_info anchor="right" x="1393" y="121" width="434" height="856" id="Documentation" side_tool="true" visible="true" weight="0.17910448" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -481,8 +486,9 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TransformerForRTP$Train.coverage" NAME="Train Coverage Results" MODIFIED="1577781766967" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/harvard" />
-    <SUITE FILE_PATH="coverage/TransformerForRTP$Train__2_.coverage" NAME="Train (2) Coverage Results" MODIFIED="1578393005544" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RTPByHarvardGPU" />
+    <SUITE FILE_PATH="coverage/TransformerForRTP$Train__2_.coverage" NAME="Train (2) Coverage Results" MODIFIED="1578470669696" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RTPByHarvardGPU" />
     <SUITE FILE_PATH="coverage/TransformerForRTP$Data.coverage" NAME="Data Coverage Results" MODIFIED="1578213925562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RTPByHarvardGPU" />
+    <SUITE FILE_PATH="coverage/TransformerForRTP$Train_kFoldCrossValidation.coverage" NAME="Train_kFoldCrossValidation Coverage Results" MODIFIED="1578498018385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RTPByHarvardGPU" />
     <SUITE FILE_PATH="coverage/TransformerForRTP$MultiTrain.coverage" NAME="MultiTrain Coverage Results" MODIFIED="1577957800147" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/harvard_MultiGPU" />
     <SUITE FILE_PATH="coverage/TransformerForRTP$Merge.coverage" NAME="Merge Coverage Results" MODIFIED="1577779695295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/harvard" />
     <SUITE FILE_PATH="coverage/TransformerForRTP$Train__3_.coverage" NAME="Train (3) Coverage Results" MODIFIED="1577956905455" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/harvard_MultiGPU" />
@@ -490,14 +496,6 @@
     <SUITE FILE_PATH="coverage/TransformerForRTP$Train__1_.coverage" NAME="Train (1) Coverage Results" MODIFIED="1577952385700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/harvard_GPU" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/harvard_MultiGPU/TrueExample.py" />
-    <entry file="file://$PROJECT_DIR$/harvard_MultiGPU/Batch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/harvard_MultiGPU/Data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-53" />
@@ -693,13 +691,6 @@
     <entry file="file://$PROJECT_DIR$/RTPByHarvardGPU/Train_v2.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/RTPByHarvardGPU/下一步任务">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="9" lean-forward="true" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RTPByHarvardGPU/Tool.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -772,46 +763,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RTPByHarvardGPU/Generator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RTPByHarvardGPU/Batch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RTPByHarvardGPU/TempLossCompute.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="9" column="106" selection-start-line="9" selection-start-column="106" selection-end-line="9" selection-end-column="106" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RTPByHarvardGPU/TrainTool.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="70" column="41" selection-start-line="70" selection-start-column="41" selection-end-line="70" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RTPByHarvardGPU/Data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
-          <caret line="40" column="29" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -823,9 +778,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Data/helpdesk_extend.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/Hospital_Billing_extend.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Data/bpi_13_incidents_extend.csv">
@@ -840,10 +792,71 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/RTPByHarvardGPU/Train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1075">
-          <caret line="41" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+        <state relative-caret-position="265">
+          <caret line="99" column="68" lean-forward="true" selection-start-line="99" selection-start-column="68" selection-end-line="99" selection-end-column="68" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RTPByHarvardGPU/Batch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/sklearn/model_selection/_split.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="427" column="8" selection-start-line="427" selection-start-column="8" selection-end-line="427" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RTPByHarvardGPU/Data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="36" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RTPByHarvardGPU/Train_kFoldCrossValidation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RTPByHarvardGPU/Generator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RTPByHarvardGPU/下一步任务">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="55" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/Hospital_Billing_extend.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RTPByHarvardGPU/TrainTool.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="156" column="63" selection-start-line="156" selection-start-column="63" selection-end-line="156" selection-end-column="63" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#1746#2407#0" />
           </folding>
         </state>
       </provider>

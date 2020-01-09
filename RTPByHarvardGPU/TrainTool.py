@@ -19,6 +19,7 @@ from RTPByHarvardGPU.NoamOpt import NoamOpt
 from RTPByHarvardGPU.LabelSmoothing import LabelSmoothing
 from RTPByHarvardGPU.Batch import Batch
 from RTPByHarvardGPU.SimpleLossCompute import SimpleLossCompute
+from sklearn.model_selection import KFold
 from RTPByHarvardGPU.Tool import subsequent_mask
 from RTPByHarvardGPU.PredictLayer import PredictLayer
 import os
@@ -85,8 +86,13 @@ def run_epoch(data_iter, model, loss_compute):
             tokens = 0
     return total_loss / total_tokens
 
-
-
+def build_k_fold_data(k,data):
+    kf = KFold(n_splits=k).split(data)
+    print(len(data))
+    for train, test in kf:
+        print('train',len(train),train)
+        print('test',len(test),test)
+    #return
 def eval_model(data_iter, model, loss_compute):
     "Standard Training and Logging Function"
     start = time.time()
@@ -148,8 +154,7 @@ def greedy_decode(model, src, src_mask, max_len, start_symbol):
     for i in range(max_len-1):
         out = model.decode(memory, src_mask,
                            Variable(ys),
-                           Variable(subsequent_mask(ys.size(1))
-                                    .type_as(src.data)))
+                           Variable(subsequent_mask(ys.size(1)).type_as(src.data)))
         prob = model.generator(out[:, -1])
         _, next_word = torch.max(prob, dim = 1)
         next_word = next_word.data[0]

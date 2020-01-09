@@ -47,6 +47,7 @@ class Data():
         self.event2id = event2id
         self.id2event = id2event
         self.vocab_size = len(event2id)
+
     # def split_train_test(self,train_size):
     #     trace_list = [self.trace_data[k] for k in self.trace_data]
     #     self.train_trace, self.test_trace = train_test_split(self.trace_data,train_size=train_size, random_state=42)
