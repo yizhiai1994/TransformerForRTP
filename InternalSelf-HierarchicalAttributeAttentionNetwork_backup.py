@@ -7,7 +7,6 @@ from torch.autograd import Variable
 from sklearn.model_selection import KFold
 from sklearn.model_selection import train_test_split
 import torch.nn.functional as F
-import os
 # ToolMethods
 def data_gen(trace_list, padding_dix,batch_size):
     src_batch_temp = list()
@@ -500,30 +499,6 @@ trace_column = 0
 event_column = 1
 time_column = 2
 attribute_columns = [1,7]
-train_size=0.7
-start_pos = 0
-N=2
-lr=0.1
-epochs = 1
-batch_size=50
-padding_dix=0
-k_fold=1
-optim_mode = 'Adam'
-criterion_mode = 'MSE'
-target_mode='single'
-verify_mode = str(k_fold) + '-fold'
-result_folder = './result/'
-record_folder = './result/record/'
-model_save_folder = ''
-dataset_name = 'helpdesk'
-result_file = result_folder + dataset_name + '.csv'
-# Record
-if not os.path.isfile(result_file):
-    result_file_open = open(result_file, 'w', encoding='utf-8')
-    result_file_open.writelines(
-        '数据集,验证方式,训练集:测试集,验证次数,单目标/多目标,损失函数,优化方法,学习率,训练轮数,MAE,MSE,RMSE,total_loss,total_tokens,total_loss/total_tokens\n')
-else:
-    result_file_open = open(result_file, 'a', encoding='utf-8')
 #    InitData
 dataimpt = DataOperate(data_address=datafile,time_type = time_type)
 dataimpt.build_trace(trace_column,attribute_columns,time_column)
@@ -533,37 +508,25 @@ dataimpt.build_processed_trace(start_pos=0)
 trace_list = dataimpt.trace_list
 train_list, test_list = train_test_split(trace_list,train_size=0.7)
 train_list, test_list = dataimpt.build_train_test_trace(train_list, test_list, start_pos = 0)
-
 #   InitModel
 V = dataimpt.vocab_size
 criterion = nn.MSELoss().cuda()# criterion = LabelSmoothing(size=V, padding_idx=0, smoothing=0.0)
-model = make_model(V, V, N=N,attribute_length=len(attribute_columns))
+model = make_model(V, V, N=2,attribute_length=len(attribute_columns))
 model = model.cuda()
 criterion = criterion.cuda()
-model_opt = torch.optim.Adam(model.parameters(), lr=lr)# model_opt = NoamOpt(model.src_embed[0].d_model, 1, 400,torch.optim.Adam(model.parameters(), lr=0, betas=(0.9, 0.98), eps=1e-9))
+model_opt = torch.optim.Adam(model.parameters(), lr=0.1)# model_opt = NoamOpt(model.src_embed[0].d_model, 1, 400,torch.optim.Adam(model.parameters(), lr=0, betas=(0.9, 0.98), eps=1e-9))
 #   Train
-for epoch in range(epochs):
+for epoch in range(1):
     print("epoch",epoch)
     model.train()
     # run_epoch(data_gen(train_list, Data_test.event2id, batch_size=200, padding_dix=0), model,
     #           SimpleLossCompute(model.generator, criterion, model_opt))
-    run_epoch(data_gen(train_list, batch_size=batch_size, padding_dix=padding_dix), model,
+    run_epoch(data_gen(train_list, batch_size=50, padding_dix=0), model,
               TempLossCompute(criterion, model_opt))
 
     model.eval()
 
-    total_loss, total_tokens, (pad_mse, no_pad_mse, pad_rmse, no_pad_rmse, pad_mae, no_pad_mae) = \
-        eval_model(data_gen(test_list, dataimpt.event2id, padding_dix=padding_dix, batch_size=batch_size),
-                   model, TempLossCompute(criterion, None))
-    result_file_open.writelines(
-        dataset_name + ',' + verify_mode + ',' + str(len(train_list)) + ':' + str(len(test_list)) + ',' + str(
-            1) + ',' + target_mode + ',' +
-        criterion_mode + ',' + optim_mode + ',' + str(lr) + ',' + str(epoch) + ',' +
-        str(pad_mae) + ',' + str(pad_mse) + ',' + str(pad_rmse) + ',' + str(total_loss.item()) + ',' + str(
-            total_tokens.item()) + ',' +
-        str(float(total_loss.item() / total_tokens.item())) + '\n')
-
-    print(run_epoch(data_gen(test_list, batch_size=batch_size, padding_dix=padding_dix), model,
+    print(run_epoch(data_gen(test_list, batch_size=50, padding_dix=0), model,
                     TempLossCompute(criterion, None)))
 
 model.eval()

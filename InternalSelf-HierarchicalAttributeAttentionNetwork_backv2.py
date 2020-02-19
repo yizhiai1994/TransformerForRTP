@@ -491,80 +491,241 @@ def eval_model(data_iter, model, loss_compute):
     eval_data = result_eval(out_list, tgt_list, src_list, pad=0)
     return total_loss, total_tokens, eval_data
 
-
 # Run
 #    ParameterSetting
-datafile = './Data/HospitalBilling.csv'
-time_type='%Y/%m/%d %H:%M:%S.000'
+datafile = './Data/helpdesk.csv'
+#time_type='%Y/%m/%d %H:%M:%S.000'
+time_type='%Y-%m-%d %H:%M:%S'
 trace_column = 0
 event_column = 1
 time_column = 2
-attribute_columns = [1,7]
+attribute_columns = [1]
 train_size=0.7
 start_pos = 0
-N=2
-lr=0.1
-epochs = 1
-batch_size=50
-padding_dix=0
-k_fold=1
-optim_mode = 'Adam'
-criterion_mode = 'MSE'
-target_mode='single'
-verify_mode = str(k_fold) + '-fold'
+lr = 0.1
+#   RecordSetting
 result_folder = './result/'
 record_folder = './result/record/'
 model_save_folder = ''
 dataset_name = 'helpdesk'
 result_file = result_folder + dataset_name + '.csv'
-# Record
+k = 5
+verify_mode = str(k) + '-fold' #k-fold or trani:test
+train_to_test = str(k-1) + ':' + str(1)
+criterion_mode = 'MSE'
+optim_mode = 'Adam'
+learning_rate = 0.1
+target_mode='single'
+#   Train
+def train(datafile, time_type, trace_column, attribute_columns,
+           criterion_mode, optim_mode, result_folder, target_mode, dataset_name,
+          start_pos=0, train_size=0.3, epochs=1, lr=0.1, N=2, padding_dix=0,batch_size=500, k_fold=1 ):
+    #   RecordSetting
+    result_file = result_folder + dataset_name + '.csv'
+    verify_mode = str(k) + '-fold'  # k-fold or trani:test
+    train_to_test = str(k - 1) + ':' + str(1)
+    result_file = result_folder + dataset_name + '.csv'
+    if not os.path.isfile(result_file):
+        result_file_open = open(result_file, 'w', encoding='utf-8')
+        result_file_open.writelines(
+            '数据集,验证方式,训练集:测试集,验证次数,单目标/多目标,损失函数,优化方法,学习率,训练轮数,MAE,MSE,RMSE,total_loss,total_tokens,total_loss/total_tokens\n')
+    else:
+        result_file_open = open(result_file, 'a', encoding='utf-8')
+
+    # DataSetting
+    if k_fold == 1:
+        dataimpt = DataOperate(data_address=datafile, time_type=time_type)
+        dataimpt.build_trace(trace_column, attribute_columns, time_column)
+        dataimpt.build_vocab(attribute_columns)
+        dataimpt.build_orginal_trace_list()
+        dataimpt.build_processed_trace(start_pos=start_pos)
+        trace_list = dataimpt.trace_list
+        train_list, test_list = train_test_split(trace_list, train_size=train_size)
+        train_list, test_list = dataimpt.build_train_test_trace(train_list, test_list, start_pos=start_pos)
+    else:
+        dataimpt = DataOperate(data_address=datafile, time_type=time_type)
+        dataimpt.build_trace(trace_column, attribute_columns, time_column)
+        dataimpt.build_vocab(attribute_columns)
+        dataimpt.build_orginal_trace_list()
+        dataimpt.build_processed_trace(start_pos=start_pos)
+        trace_list = dataimpt.trace_list
+        k_fold_data = build_k_fold_data(k, trace_list)
+
+    #  ModelSetting
+    V = dataimpt.vocab_size
+    model = make_model(V, V, N=N, attribute_length=len(attribute_columns))
+    model = model.cuda()
+
+    # TrainSetting
+    if optim_mode == 'Adam':
+        model_opt = torch.optim.Adam(model.parameters(), lr=lr)
+    if criterion_mode == 'MSE':
+        criterion = nn.MSELoss().cuda()  # criterion = LabelSmoothing(size=V, padding_idx=0, smoothing=0.0)
+        criterion = criterion.cuda()
+    elif criterion_mode == 'L1loss':
+        criterion = nn.L1Loss().cuda()
+        criterion = criterion.cuda()
+    # model_opt = NoamOpt(model.src_embed[0].d_model, 1, 400,torch.optim.Adam(model.parameters(), lr=0, betas=(0.9, 0.98), eps=1e-9))
+    if k_fold == 1:
+        for epoch in range(epochs):
+            print("epoch",epoch)
+            model.train()
+            run_epoch(data_gen(train_list, batch_size=batch_size, padding_dix=padding_dix), model,
+                      TempLossCompute(criterion, model_opt))
+            model.eval()
+            print(run_epoch(data_gen(test_list, batch_size=batch_size, padding_dix=padding_dix), model,
+                            TempLossCompute(criterion, None)))
+
+        model.eval()
+        print(padding_dix)
+        total_loss, total_tokens, (pad_mse, no_pad_mse, pad_rmse, no_pad_rmse, pad_mae, no_pad_mae) = \
+            eval_model(data_gen(test_list, dataimpt.event2id, padding_dix=padding_dix, batch_size=batch_size),
+                       model, TempLossCompute(criterion, None))
+        result_file_open.writelines(
+            dataset_name + ',' + verify_mode + ',' + str(len(train_list)) + ':' + str(len(test_list)) + ',' + str(
+                1) + ',' + target_mode + ',' +
+            criterion_mode + ',' + optim_mode + ',' + str(learning_rate) + ',' + str(epoch) + ',' +
+            str(pad_mae) + ',' + str(pad_mse) + ',' + str(pad_rmse) + ',' + str(total_loss.item()) + ',' + str(
+                total_tokens.item()) + ',' +
+            str(float(total_loss.item() / total_tokens.item())) + '\n')
+    else:
+        for train_data, test_data in k_fold_data:
+            # print(train_data)
+            print('fold', fold)
+            train_list, test_list = dataimpt.build_train_test_trace(train_data, test_data, start_pos=start_pos)
+            for epoch in range(10):
+                print(epoch)
+                model.train()
+                run_epoch(data_gen(train_list, batch_size=batch_size, padding_dix=padding_dix), model,
+                          TempLossCompute(criterion, model_opt))
+                # model.eval()
+                # print(run_epoch(data_gen(test_list, batch_size=batch_size, padding_dix=padding_dix), model,
+                #                 TempLossCompute(criterion, None)))
+            #
+            model.eval()
+            # print(eval_model(data_gen(test_list, Data_test.event2id, batch_size=500, padding_dix=0), model,
+            #                     TempLossCompute(criterion, None)))
+            total_loss, total_tokens, (pad_mse, no_pad_mse, pad_rmse, no_pad_rmse, pad_mae, no_pad_mae) = \
+                eval_model(data_gen(test_list, dataimpt.event2id, batch_size=batch_size, padding_dix=padding_dix),
+                           model, TempLossCompute(criterion, None))
+            '数据集,验证方式,训练集:测试集,验证次数,单目标/多目标,损失函数,优化方法,学习率,训练轮数,MAE,MSE,RMSE,,,\n'
+            result_file_open.writelines(
+                dataset_name + ',' + verify_mode + ',' + str(len(train_data)) + ':' + str(len(test_data)) + ',' + str(
+                    fold) + ',' + target_mode + ',' +
+                criterion_mode + ',' + optim_mode + ',' + str(learning_rate) + ',' + str(epoch) + ',' +
+                str(pad_mae) + ',' + str(pad_mse) + ',' + str(pad_rmse) + ',' + str(total_loss.item()) + ',' + str(
+                    total_tokens.item()) + ',' +
+                str(float(total_loss.item() / total_tokens.item())) + '\n')
+            fold = fold + 1
+        result_file_open.close()
+
+# train(datafile, time_type, trace_column, attribute_columns,
+#            criterion_mode, optim_mode, result_folder, target_mode, dataset_name,
+#           start_pos=0, train_size=0.3, epochs=1, lr=0.1, N=2, padding_dix=0,batch_size=500, k_fold=1 )
+
+start_pos=0
+train_size=0.3
+epochs=1
+lr=0.1
+N=2
+padding_dix=0
+batch_size=500
+k_fold=1
+
+result_file = result_folder + dataset_name + '.csv'
+verify_mode = str(k) + '-fold'  # k-fold or trani:test
+train_to_test = str(k - 1) + ':' + str(1)
+result_file = result_folder + dataset_name + '.csv'
 if not os.path.isfile(result_file):
     result_file_open = open(result_file, 'w', encoding='utf-8')
     result_file_open.writelines(
         '数据集,验证方式,训练集:测试集,验证次数,单目标/多目标,损失函数,优化方法,学习率,训练轮数,MAE,MSE,RMSE,total_loss,total_tokens,total_loss/total_tokens\n')
 else:
     result_file_open = open(result_file, 'a', encoding='utf-8')
-#    InitData
-dataimpt = DataOperate(data_address=datafile,time_type = time_type)
-dataimpt.build_trace(trace_column,attribute_columns,time_column)
-dataimpt.build_vocab(attribute_columns)
-dataimpt.build_orginal_trace_list()
-dataimpt.build_processed_trace(start_pos=0)
-trace_list = dataimpt.trace_list
-train_list, test_list = train_test_split(trace_list,train_size=0.7)
-train_list, test_list = dataimpt.build_train_test_trace(train_list, test_list, start_pos = 0)
 
-#   InitModel
+# DataSetting
+if k_fold == 1:
+    dataimpt = DataOperate(data_address=datafile, time_type=time_type)
+    dataimpt.build_trace(trace_column, attribute_columns, time_column)
+    dataimpt.build_vocab(attribute_columns)
+    dataimpt.build_orginal_trace_list()
+    dataimpt.build_processed_trace(start_pos=start_pos)
+    trace_list = dataimpt.trace_list
+    train_list, test_list = train_test_split(trace_list, train_size=train_size)
+    train_list, test_list = dataimpt.build_train_test_trace(train_list, test_list, start_pos=start_pos)
+else:
+    dataimpt = DataOperate(data_address=datafile, time_type=time_type)
+    dataimpt.build_trace(trace_column, attribute_columns, time_column)
+    dataimpt.build_vocab(attribute_columns)
+    dataimpt.build_orginal_trace_list()
+    dataimpt.build_processed_trace(start_pos=start_pos)
+    trace_list = dataimpt.trace_list
+    k_fold_data = build_k_fold_data(k, trace_list)
+
+#  ModelSetting
 V = dataimpt.vocab_size
-criterion = nn.MSELoss().cuda()# criterion = LabelSmoothing(size=V, padding_idx=0, smoothing=0.0)
-model = make_model(V, V, N=N,attribute_length=len(attribute_columns))
+model = make_model(V, V, N=N, attribute_length=len(attribute_columns))
 model = model.cuda()
-criterion = criterion.cuda()
-model_opt = torch.optim.Adam(model.parameters(), lr=lr)# model_opt = NoamOpt(model.src_embed[0].d_model, 1, 400,torch.optim.Adam(model.parameters(), lr=0, betas=(0.9, 0.98), eps=1e-9))
-#   Train
-for epoch in range(epochs):
-    print("epoch",epoch)
-    model.train()
-    # run_epoch(data_gen(train_list, Data_test.event2id, batch_size=200, padding_dix=0), model,
-    #           SimpleLossCompute(model.generator, criterion, model_opt))
-    run_epoch(data_gen(train_list, batch_size=batch_size, padding_dix=padding_dix), model,
-              TempLossCompute(criterion, model_opt))
+
+# TrainSetting
+if optim_mode == 'Adam':
+    model_opt = torch.optim.Adam(model.parameters(), lr=lr)
+if criterion_mode == 'MSE':
+    criterion = nn.MSELoss().cuda()  # criterion = LabelSmoothing(size=V, padding_idx=0, smoothing=0.0)
+    criterion = criterion.cuda()
+elif criterion_mode == 'L1loss':
+    criterion = nn.L1Loss().cuda()
+    criterion = criterion.cuda()
+# model_opt = NoamOpt(model.src_embed[0].d_model, 1, 400,torch.optim.Adam(model.parameters(), lr=0, betas=(0.9, 0.98), eps=1e-9))
+if k_fold == 1:
+    for epoch in range(epochs):
+        print("epoch",epoch)
+        model.train()
+        run_epoch(data_gen(train_list, batch_size=batch_size, padding_dix=padding_dix), model,
+                  TempLossCompute(criterion, model_opt))
+        model.eval()
+        print(run_epoch(data_gen(test_list, batch_size=batch_size, padding_dix=padding_dix), model,
+                        TempLossCompute(criterion, None)))
 
     model.eval()
-
+    print(padding_dix)
     total_loss, total_tokens, (pad_mse, no_pad_mse, pad_rmse, no_pad_rmse, pad_mae, no_pad_mae) = \
         eval_model(data_gen(test_list, dataimpt.event2id, padding_dix=padding_dix, batch_size=batch_size),
                    model, TempLossCompute(criterion, None))
     result_file_open.writelines(
         dataset_name + ',' + verify_mode + ',' + str(len(train_list)) + ':' + str(len(test_list)) + ',' + str(
             1) + ',' + target_mode + ',' +
-        criterion_mode + ',' + optim_mode + ',' + str(lr) + ',' + str(epoch) + ',' +
+        criterion_mode + ',' + optim_mode + ',' + str(learning_rate) + ',' + str(epoch) + ',' +
         str(pad_mae) + ',' + str(pad_mse) + ',' + str(pad_rmse) + ',' + str(total_loss.item()) + ',' + str(
             total_tokens.item()) + ',' +
         str(float(total_loss.item() / total_tokens.item())) + '\n')
-
-    print(run_epoch(data_gen(test_list, batch_size=batch_size, padding_dix=padding_dix), model,
-                    TempLossCompute(criterion, None)))
-
-model.eval()
-
+else:
+    for train_data, test_data in k_fold_data:
+        # print(train_data)
+        print('fold', fold)
+        train_list, test_list = dataimpt.build_train_test_trace(train_data, test_data, start_pos=start_pos)
+        for epoch in range(10):
+            print(epoch)
+            model.train()
+            run_epoch(data_gen(train_list, batch_size=batch_size, padding_dix=padding_dix), model,
+                      TempLossCompute(criterion, model_opt))
+            # model.eval()
+            # print(run_epoch(data_gen(test_list, batch_size=batch_size, padding_dix=padding_dix), model,
+            #                 TempLossCompute(criterion, None)))
+        #
+        model.eval()
+        # print(eval_model(data_gen(test_list, Data_test.event2id, batch_size=500, padding_dix=0), model,
+        #                     TempLossCompute(criterion, None)))
+        total_loss, total_tokens, (pad_mse, no_pad_mse, pad_rmse, no_pad_rmse, pad_mae, no_pad_mae) = \
+            eval_model(data_gen(test_list, dataimpt.event2id, batch_size=batch_size, padding_dix=padding_dix),
+                       model, TempLossCompute(criterion, None))
+        '数据集,验证方式,训练集:测试集,验证次数,单目标/多目标,损失函数,优化方法,学习率,训练轮数,MAE,MSE,RMSE,,,\n'
+        result_file_open.writelines(
+            dataset_name + ',' + verify_mode + ',' + str(len(train_data)) + ':' + str(len(test_data)) + ',' + str(
+                fold) + ',' + target_mode + ',' +
+            criterion_mode + ',' + optim_mode + ',' + str(learning_rate) + ',' + str(epoch) + ',' +
+            str(pad_mae) + ',' + str(pad_mse) + ',' + str(pad_rmse) + ',' + str(total_loss.item()) + ',' + str(
+                total_tokens.item()) + ',' +
+            str(float(total_loss.item() / total_tokens.item())) + '\n')
+        fold = fold + 1
+    result_file_open.close()
